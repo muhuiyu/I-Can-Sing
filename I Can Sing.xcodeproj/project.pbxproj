@@ -15,19 +15,32 @@
 		E4D4322E2ABC61EF001C1EC6 /* I_Can_SingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4322D2ABC61EF001C1EC6 /* I_Can_SingTests.swift */; };
 		E4D432382ABC61EF001C1EC6 /* I_Can_SingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432372ABC61EF001C1EC6 /* I_Can_SingUITests.swift */; };
 		E4D4323A2ABC61EF001C1EC6 /* I_Can_SingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432392ABC61EF001C1EC6 /* I_Can_SingUITestsLaunchTests.swift */; };
-		E4D432492ABC6257001C1EC6 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432482ABC6257001C1EC6 /* DataProvider.swift */; };
+		E4D432492ABC6257001C1EC6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432482ABC6257001C1EC6 /* NetworkManager.swift */; };
 		E4D432512ABC63EB001C1EC6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432502ABC63EB001C1EC6 /* MainTabBarController.swift */; };
-		E4D432532ABC661E001C1EC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432522ABC661E001C1EC6 /* HomeViewController.swift */; };
+		E4D432532ABC661E001C1EC6 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432522ABC661E001C1EC6 /* ExploreViewController.swift */; };
 		E4D432552ABC6639001C1EC6 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432542ABC6639001C1EC6 /* Base.swift */; };
-		E4D432572ABC680F001C1EC6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432562ABC680F001C1EC6 /* HomeViewModel.swift */; };
+		E4D432572ABC680F001C1EC6 /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432562ABC680F001C1EC6 /* ExploreViewModel.swift */; };
 		E4D4325A2ABC6847001C1EC6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = E4D432592ABC6847001C1EC6 /* SnapKit */; };
 		E4D4325D2ABC68AE001C1EC6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E4D4325C2ABC68AE001C1EC6 /* RxCocoa */; };
 		E4D4325F2ABC68AE001C1EC6 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = E4D4325E2ABC68AE001C1EC6 /* RxRelay */; };
 		E4D432612ABC68AE001C1EC6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4D432602ABC68AE001C1EC6 /* RxSwift */; };
-		E4D432632ABC6D8B001C1EC6 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432622ABC6D8B001C1EC6 /* DataProviderTests.swift */; };
+		E4D432632ABC6D8B001C1EC6 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432622ABC6D8B001C1EC6 /* NetworkManagerTests.swift */; };
 		E4D432652ABC73CF001C1EC6 /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432642ABC73CF001C1EC6 /* SongViewController.swift */; };
 		E4D432672ABC73D9001C1EC6 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432662ABC73D9001C1EC6 /* SongViewModel.swift */; };
 		E4D4326A2ABC7583001C1EC6 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = E4D432692ABC7583001C1EC6 /* SwiftSoup */; };
+		E4D4326F2ABC9410001C1EC6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4326E2ABC9410001C1EC6 /* LibraryViewController.swift */; };
+		E4D432712ABC9418001C1EC6 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432702ABC9418001C1EC6 /* LibraryViewModel.swift */; };
+		E4D432732ABC9434001C1EC6 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432722ABC9434001C1EC6 /* DatabaseManager.swift */; };
+		E4D432762ABC9619001C1EC6 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E4D432752ABC9619001C1EC6 /* Realm */; };
+		E4D432782ABC9619001C1EC6 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4D432772ABC9619001C1EC6 /* RealmSwift */; };
+		E4D4327B2ABC9672001C1EC6 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4327A2ABC9672001C1EC6 /* Song.swift */; };
+		E4D4327D2ABC967C001C1EC6 /* AnnotatedSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4327C2ABC967C001C1EC6 /* AnnotatedSong.swift */; };
+		E4D4327F2ABC9977001C1EC6 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4327E2ABC9977001C1EC6 /* Persistable.swift */; };
+		E4D432822ABC99B4001C1EC6 /* AnnotatedSongObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432812ABC99B4001C1EC6 /* AnnotatedSongObject.swift */; };
+		E4D432862ABD0BB4001C1EC6 /* AnnotateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432852ABD0BB4001C1EC6 /* AnnotateViewController.swift */; };
+		E4D432882ABD0BCC001C1EC6 /* AnnotateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D432872ABD0BCC001C1EC6 /* AnnotateViewModel.swift */; };
+		E4D4328B2ABD0C0F001C1EC6 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4328A2ABD0C0F001C1EC6 /* UITextView+Extensions.swift */; };
+		E4D4328E2ABD1D36001C1EC6 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D4328D2ABD1D36001C1EC6 /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,14 +73,25 @@
 		E4D432332ABC61EF001C1EC6 /* I Can SingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I Can SingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D432372ABC61EF001C1EC6 /* I_Can_SingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_Can_SingUITests.swift; sourceTree = "<group>"; };
 		E4D432392ABC61EF001C1EC6 /* I_Can_SingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_Can_SingUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E4D432482ABC6257001C1EC6 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		E4D432482ABC6257001C1EC6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E4D432502ABC63EB001C1EC6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		E4D432522ABC661E001C1EC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E4D432522ABC661E001C1EC6 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		E4D432542ABC6639001C1EC6 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		E4D432562ABC680F001C1EC6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		E4D432622ABC6D8B001C1EC6 /* DataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
+		E4D432562ABC680F001C1EC6 /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		E4D432622ABC6D8B001C1EC6 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		E4D432642ABC73CF001C1EC6 /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		E4D432662ABC73D9001C1EC6 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		E4D4326E2ABC9410001C1EC6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		E4D432702ABC9418001C1EC6 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		E4D432722ABC9434001C1EC6 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		E4D4327A2ABC9672001C1EC6 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		E4D4327C2ABC967C001C1EC6 /* AnnotatedSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedSong.swift; sourceTree = "<group>"; };
+		E4D4327E2ABC9977001C1EC6 /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		E4D432812ABC99B4001C1EC6 /* AnnotatedSongObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedSongObject.swift; sourceTree = "<group>"; };
+		E4D432852ABD0BB4001C1EC6 /* AnnotateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotateViewController.swift; sourceTree = "<group>"; };
+		E4D432872ABD0BCC001C1EC6 /* AnnotateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotateViewModel.swift; sourceTree = "<group>"; };
+		E4D4328A2ABD0C0F001C1EC6 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		E4D4328D2ABD1D36001C1EC6 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D432762ABC9619001C1EC6 /* Realm in Frameworks */,
 				E4D4325F2ABC68AE001C1EC6 /* RxRelay in Frameworks */,
+				E4D432782ABC9619001C1EC6 /* RealmSwift in Frameworks */,
 				E4D4325D2ABC68AE001C1EC6 /* RxCocoa in Frameworks */,
 				E4D432612ABC68AE001C1EC6 /* RxSwift in Frameworks */,
 				E4D4325A2ABC6847001C1EC6 /* SnapKit in Frameworks */,
@@ -123,8 +149,8 @@
 		E4D432152ABC61EE001C1EC6 /* I Can Sing */ = {
 			isa = PBXGroup;
 			children = (
+				E4D432792ABC965A001C1EC6 /* Model */,
 				E4D4324A2ABC6269001C1EC6 /* Helpers */,
-				E4D432472ABC624A001C1EC6 /* Data */,
 				E4D432462ABC6242001C1EC6 /* Features */,
 				E4D432162ABC61EE001C1EC6 /* AppDelegate.swift */,
 				E4D432182ABC61EE001C1EC6 /* SceneDelegate.swift */,
@@ -140,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				E4D4322D2ABC61EF001C1EC6 /* I_Can_SingTests.swift */,
-				E4D432622ABC6D8B001C1EC6 /* DataProviderTests.swift */,
+				E4D432622ABC6D8B001C1EC6 /* NetworkManagerTests.swift */,
 			);
 			path = "I Can SingTests";
 			sourceTree = "<group>";
@@ -157,40 +183,46 @@
 		E4D432462ABC6242001C1EC6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				E4D4324E2ABC63D8001C1EC6 /* Core */,
-				E4D4324B2ABC6282001C1EC6 /* Home */,
+				E4D4326B2ABC93F9001C1EC6 /* Library */,
+				E4D4324B2ABC6282001C1EC6 /* Explore */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		E4D432472ABC624A001C1EC6 /* Data */ = {
+		E4D432472ABC624A001C1EC6 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				E4D432482ABC6257001C1EC6 /* DataProvider.swift */,
+				E4D432482ABC6257001C1EC6 /* NetworkManager.swift */,
+				E4D432722ABC9434001C1EC6 /* DatabaseManager.swift */,
 			);
-			path = Data;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		E4D4324A2ABC6269001C1EC6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E4D4328C2ABD1D2C001C1EC6 /* Factory */,
+				E4D432892ABD0C01001C1EC6 /* Extensions */,
+				E4D4324E2ABC63D8001C1EC6 /* Core */,
+				E4D432802ABC99A4001C1EC6 /* Realm */,
+				E4D432472ABC624A001C1EC6 /* Managers */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		E4D4324B2ABC6282001C1EC6 /* Home */ = {
+		E4D4324B2ABC6282001C1EC6 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
 				E4D4324D2ABC628F001C1EC6 /* View Models */,
 				E4D4324C2ABC6288001C1EC6 /* View Controllers */,
 			);
-			path = Home;
+			path = Explore;
 			sourceTree = "<group>";
 		};
 		E4D4324C2ABC6288001C1EC6 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E4D432522ABC661E001C1EC6 /* HomeViewController.swift */,
+				E4D432522ABC661E001C1EC6 /* ExploreViewController.swift */,
 				E4D432642ABC73CF001C1EC6 /* SongViewController.swift */,
 			);
 			path = "View Controllers";
@@ -199,7 +231,7 @@
 		E4D4324D2ABC628F001C1EC6 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				E4D432562ABC680F001C1EC6 /* HomeViewModel.swift */,
+				E4D432562ABC680F001C1EC6 /* ExploreViewModel.swift */,
 				E4D432662ABC73D9001C1EC6 /* SongViewModel.swift */,
 			);
 			path = "View Models";
@@ -212,6 +244,67 @@
 				E4D432542ABC6639001C1EC6 /* Base.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E4D4326B2ABC93F9001C1EC6 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E4D4326D2ABC9403001C1EC6 /* View Models */,
+				E4D4326C2ABC93FF001C1EC6 /* View Controllers */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		E4D4326C2ABC93FF001C1EC6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4D4326E2ABC9410001C1EC6 /* LibraryViewController.swift */,
+				E4D432852ABD0BB4001C1EC6 /* AnnotateViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E4D4326D2ABC9403001C1EC6 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4D432702ABC9418001C1EC6 /* LibraryViewModel.swift */,
+				E4D432872ABD0BCC001C1EC6 /* AnnotateViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		E4D432792ABC965A001C1EC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4D4327A2ABC9672001C1EC6 /* Song.swift */,
+				E4D4327C2ABC967C001C1EC6 /* AnnotatedSong.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4D432802ABC99A4001C1EC6 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E4D4327E2ABC9977001C1EC6 /* Persistable.swift */,
+				E4D432812ABC99B4001C1EC6 /* AnnotatedSongObject.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		E4D432892ABD0C01001C1EC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4D4328A2ABD0C0F001C1EC6 /* UITextView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4D4328C2ABD1D2C001C1EC6 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				E4D4328D2ABD1D36001C1EC6 /* Factory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +329,8 @@
 				E4D4325E2ABC68AE001C1EC6 /* RxRelay */,
 				E4D432602ABC68AE001C1EC6 /* RxSwift */,
 				E4D432692ABC7583001C1EC6 /* SwiftSoup */,
+				E4D432752ABC9619001C1EC6 /* Realm */,
+				E4D432772ABC9619001C1EC6 /* RealmSwift */,
 			);
 			productName = "I Can Sing";
 			productReference = E4D432132ABC61EE001C1EC6 /* I Can Sing.app */;
@@ -313,6 +408,7 @@
 				E4D432582ABC6847001C1EC6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				E4D4325B2ABC68AE001C1EC6 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				E4D432682ABC7583001C1EC6 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				E4D432742ABC9619001C1EC6 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = E4D432142ABC61EE001C1EC6 /* Products */;
 			projectDirPath = "";
@@ -356,16 +452,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D4327B2ABC9672001C1EC6 /* Song.swift in Sources */,
 				E4D4321B2ABC61EE001C1EC6 /* ViewController.swift in Sources */,
+				E4D4326F2ABC9410001C1EC6 /* LibraryViewController.swift in Sources */,
+				E4D432732ABC9434001C1EC6 /* DatabaseManager.swift in Sources */,
+				E4D432882ABD0BCC001C1EC6 /* AnnotateViewModel.swift in Sources */,
+				E4D432862ABD0BB4001C1EC6 /* AnnotateViewController.swift in Sources */,
 				E4D432172ABC61EE001C1EC6 /* AppDelegate.swift in Sources */,
 				E4D432512ABC63EB001C1EC6 /* MainTabBarController.swift in Sources */,
-				E4D432572ABC680F001C1EC6 /* HomeViewModel.swift in Sources */,
-				E4D432492ABC6257001C1EC6 /* DataProvider.swift in Sources */,
+				E4D432572ABC680F001C1EC6 /* ExploreViewModel.swift in Sources */,
+				E4D432492ABC6257001C1EC6 /* NetworkManager.swift in Sources */,
 				E4D432192ABC61EE001C1EC6 /* SceneDelegate.swift in Sources */,
+				E4D4328B2ABD0C0F001C1EC6 /* UITextView+Extensions.swift in Sources */,
+				E4D4327D2ABC967C001C1EC6 /* AnnotatedSong.swift in Sources */,
+				E4D4327F2ABC9977001C1EC6 /* Persistable.swift in Sources */,
+				E4D432822ABC99B4001C1EC6 /* AnnotatedSongObject.swift in Sources */,
 				E4D432652ABC73CF001C1EC6 /* SongViewController.swift in Sources */,
 				E4D432552ABC6639001C1EC6 /* Base.swift in Sources */,
-				E4D432532ABC661E001C1EC6 /* HomeViewController.swift in Sources */,
+				E4D432532ABC661E001C1EC6 /* ExploreViewController.swift in Sources */,
+				E4D432712ABC9418001C1EC6 /* LibraryViewModel.swift in Sources */,
 				E4D432672ABC73D9001C1EC6 /* SongViewModel.swift in Sources */,
+				E4D4328E2ABD1D36001C1EC6 /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,7 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4D432632ABC6D8B001C1EC6 /* DataProviderTests.swift in Sources */,
+				E4D432632ABC6D8B001C1EC6 /* NetworkManagerTests.swift in Sources */,
 				E4D4322E2ABC61EF001C1EC6 /* I_Can_SingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +831,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		E4D432742ABC9619001C1EC6 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -751,6 +866,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E4D432682ABC7583001C1EC6 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
+		};
+		E4D432752ABC9619001C1EC6 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4D432742ABC9619001C1EC6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		E4D432772ABC9619001C1EC6 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4D432742ABC9619001C1EC6 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

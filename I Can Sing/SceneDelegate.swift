@@ -20,9 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         
-        let tabBarController = MainTabBarController(dataProvider: DataProvider())
-        window.rootViewController = tabBarController
-        window.makeKeyAndVisible()
+        do {
+            let tabBarController = MainTabBarController(networkManager: NetworkManager(),
+                                                        databaseManager: try DatabaseManager())
+            window.rootViewController = tabBarController
+            window.makeKeyAndVisible()
+        } catch {
+            print("Error: \(error)")
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

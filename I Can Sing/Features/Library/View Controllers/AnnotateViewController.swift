@@ -1,29 +1,26 @@
 //
-//  SongViewController.swift
+//  AnnotateViewController.swift
 //  I Can Sing
 //
-//  Created by Grace, Mu-Hui Yu on 9/21/23.
+//  Created by Grace, Mu-Hui Yu on 9/22/23.
 //
 
 import UIKit
 import RxSwift
 import RxRelay
 
-class SongViewController: Base.MVVMViewController<SongViewModel> {
+class AnnotateViewController: Base.MVVMViewController<AnnotateViewModel> {
     
     // MARK: - Views
     private let textView = UITextView()
-    private let commentButton = UIButton()
     private let activityIndicatorView = UIActivityIndicatorView()
     
     private var highlightedWordRange: NSRange? {
         didSet {
             if let oldValue = oldValue {
-                // Remove background color from the previously highlighted word
                 unhighlightWord(range: oldValue)
             }
             if let highlightedWordRange = highlightedWordRange {
-                // Highlight the newly selected word
                 highlightWord(range: highlightedWordRange)
             }
         }
@@ -35,14 +32,12 @@ class SongViewController: Base.MVVMViewController<SongViewModel> {
         configureConstraints()
         configureGestures()
         configureBindings()
-        
-        viewModel.setup()
     }
     
 }
 
 // MARK: - View Config
-extension SongViewController {
+extension AnnotateViewController {
     private func configureViews() {
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -53,12 +48,6 @@ extension SongViewController {
         textView.delegate = self
         textView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(textView)
-        
-        commentButton.setTitle("Add Comment", for: .normal)
-        commentButton.backgroundColor = .blue
-        commentButton.addTarget(self, action: #selector(commentButtonTapped), for: .touchUpInside)
-        commentButton.frame = CGRect(x: 20, y: 20, width: 150, height: 40)
-        view.addSubview(commentButton)
         
         activityIndicatorView.isHidden = true
         view.addSubview(activityIndicatorView)
@@ -114,14 +103,10 @@ extension SongViewController {
 }
 
 // MARK: - Handlers
-extension SongViewController {
+extension AnnotateViewController {
     private func reloadData() {
         title = viewModel.song.value?.name
         textView.text = viewModel.song.value?.lyrics
-    }
-    @objc private func commentButtonTapped() {
-        // Implement comment functionality here
-        // You can present a comment dialog or perform any other action
     }
     
     @objc private func handleWordTapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
@@ -164,9 +149,6 @@ extension SongViewController {
     }
     
     private func handleWordTapped(word: String, at range: NSRange) {
-        // Implement word-level highlighting or commenting logic here
-        // You can track the tapped word and perform actions accordingly
-        
         print("did tap word \(word)")
         // show menu and choose
         
@@ -185,8 +167,14 @@ extension SongViewController {
         alert.addTextField { textField in
             textField.placeholder = "Enter note"
         }
-        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak self] _ in
-//            self?.viewModel.addNote()
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak self] action in
+            guard let textField = alert.textFields?[0] as? UITextField, let text = textField.text else { return }
+            do {
+                try self?.viewModel.addNote(for: word, at: range, with: text)
+            } catch {
+                let alert = Factory.makeErrorAlertController(with: "Failed to add note", for: error)
+                self?.present(alert, animated: true)
+            }
             self?.highlightedWordRange = nil
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [weak self] _ in
@@ -197,17 +185,9 @@ extension SongViewController {
 }
 
 // MARK: - TextViewDelegate
-extension SongViewController: UITextViewDelegate {
+extension AnnotateViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         // Here you can update the lyrics text as the user types if needed
         
-    }
-}
-
-extension UITextView {
-    func convertToNSRange(from range: UITextRange) -> NSRange {
-        let location = self.offset(from: self.beginningOfDocument, to: range.start)
-        let length = self.offset(from: range.start, to: range.end)
-        return NSRange(location: location, length: length)
     }
 }

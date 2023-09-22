@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  LibraryViewController.swift
 //  I Can Sing
 //
 //  Created by Grace, Mu-Hui Yu on 9/21/23.
@@ -7,12 +7,11 @@
 
 import UIKit
 import RxSwift
+import RxRelay
 
-class HomeViewController: Base.MVVMViewController<HomeViewModel> {
+class LibraryViewController: Base.MVVMViewController<LibraryViewModel> {
     
     private let tableView = UITableView()
-    private let searchBar = UISearchBar()
-    private let activityIndicatorView = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,38 +19,24 @@ class HomeViewController: Base.MVVMViewController<HomeViewModel> {
         configureConstraints()
         configureBindings()
     }
+    
 }
 
 // MARK: - View Config
-extension HomeViewController {
+extension LibraryViewController {
     private func configureViews() {
-        searchBar.placeholder = "Search for lyrics"
-        searchBar.delegate = self
-        navigationItem.titleView = searchBar
+        title = "Library"
         
         tableView.dataSource = self
         tableView.delegate = self
         view.addSubview(tableView)
-        
-        activityIndicatorView.isHidden = true
-        view.addSubview(activityIndicatorView)
     }
     private func configureConstraints() {
         tableView.snp.remakeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
-        activityIndicatorView.snp.remakeConstraints { make in
-            make.center.equalToSuperview()
-        }
     }
     private func configureBindings() {
-        viewModel.isFetching
-            .asObservable()
-            .subscribe { [weak self] isLoading in
-                self?.activityIndicatorView.isHidden = !isLoading
-            }
-            .disposed(by: disposeBag)
-        
         viewModel.songs
             .asObservable()
             .subscribe { _ in
@@ -63,26 +48,16 @@ extension HomeViewController {
     }
 }
 
-// MARK: - SearchBarDelegate
-extension HomeViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = searchBar.text else { return }
- 
-        Task {
-            await viewModel.searchSongs(for: text)
-        }
-    }
-}
-
 // MARK: - TableView DataSource and Delegate
-extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.songs.value.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         var content = cell.defaultContentConfiguration()
-        content.text = viewModel.songs.value[indexPath.row].autocomplete
+        content.text = viewModel.songs.value[indexPath.row].name
+        content.secondaryText = viewModel.songs.value[indexPath.row].artist
         cell.contentConfiguration = content
         return cell
     }
@@ -90,9 +65,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         defer {
             tableView.deselectRow(at: indexPath, animated: true)
         }
-        let url = viewModel.songs.value[indexPath.row].url
         
-        if let viewController = viewModel.generateSongViewController(at: indexPath) {
+        if let viewController = viewModel.makeAnnotateViewController(at: indexPath) {
             navigationController?.pushViewController(viewController, animated: true)
         }
     }
